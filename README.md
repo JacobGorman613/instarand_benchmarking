@@ -38,12 +38,17 @@ Artifact for submission as part of TODO.
   - Screen reduced to minimum brightness
   - No external devices connected (mouse, monitor, etc.)
 ## Contracts
-#### Smart Contracts Overview
-- [`./contracts/supra/`](./contracts/supra/) and [`./contracts/chainlink/`](./contracts/chainlink/) contain implementations for verification of BLS Signatures on BN254 and Goldberg VRF on Secp256k1 respectively.
+#### Smart Contracts Overview ([`./contracts/`](./contracts/))
+- [`~/supra/`](./contracts/supra/) and [`~/chainlink/`](./contracts/chainlink/) contain implementations for verification of BLS Signatures on BN254 and Goldberg VRF on Secp256k1 respectively.
 They contain code initially published publicly (TODO ensure copyright and add link to SC's).
 Additionally, we created modified versions of the code ([`BLS_modified.sol`](./contracts/supra/BLS_modified.sol) and [`chainlink_modified.sol`](./contracts/chainlink/chainlink_modified.sol)) which negate several of the validity checks required by the program (`require(<FOO>) -> require(!<FOO>)`),
 This allows us to accurately benchmark VRF/dVRF verification without access to a valid input.
-We account for the added gas caused by these negations in our [analysis](./data/gas/analysis.md)
+We account for the added gas caused by these negations in our [analysis](./data/gas/analysis.md).
+- [`~/benchmarks`](./contracts/benchmarks/) contains smart contracts which measure and return the gas consumed for individual operations.
+These are used to estimate gas cost as a sum-of-parts.
+- [`~/samples`](./contracts/samples/) contains sample smart contracts implementing VRF, dVRF, FlexiRand, and InstaRand (both with centralized and decentralized server).
+These can be called to simulate normal SC execution to measure total gas consumed directly.
+- TODO maybe notes about optimizations
 #### Software Details
 - Compiled using Solidity Compiler 0.8.19
 - Deployed and run on Remix VM (Cancun) (TODO link)
