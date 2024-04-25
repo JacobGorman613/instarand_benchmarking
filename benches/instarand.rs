@@ -279,7 +279,7 @@ pub fn bench_instarand_server_dvrf_verify<C: InstarandClient, S: Dvrf, M: Measur
     group: &mut BenchmarkGroup<'_, M>,
     name: &str,
 ) {
-    let id = format!("{}/server_dvrf_partial_ver", name);
+    let id = format!("{}/server_dvrf_verify", name);
     let u = Vec::new();
     let config = DvrfConfig::default();
 
