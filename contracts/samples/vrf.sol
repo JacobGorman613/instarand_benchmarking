@@ -11,7 +11,7 @@ contract Vrf {
 
     GoldbergVrf internal gb;
 
-    mapping(uint256 => bool) internal nonceUsed;
+    //mapping(uint256 => bool) internal nonceUsed;
     mapping(uint256 => bytes32) private requests;
 
     event ReqGen(uint256 reqid, bytes x);
@@ -32,35 +32,30 @@ contract Vrf {
         emit ReqGen(reqid, x);
         return reqid;
     }
-
-    function req_return_pt(bytes memory x) public returns (bytes32, uint256[2] memory)  {
-        uint256 _reqid = req(x);
-        bytes32 inp = keccak256(abi.encodePacked(x, _reqid));
-        uint256[2] memory pt = gb._hashToCurve(pk, uint256(inp));
-        emit ReqGen(reqid, x);
-        return (inp, pt);
-    }
-
-    function fulf(bytes memory x, uint256 _reqid, bytes32 y, GoldbergVrf.Proof memory proof) public {
-        require(!nonceUsed[_reqid]);
+    function fulf(
+        bytes memory x,
+        uint256 _reqid,
+        bytes32 y,
+        GoldbergVrf.Proof memory proof
+    ) public {
+        //require(!nonceUsed[_reqid]);
         require(requests[_reqid] == keccak256(abi.encode(x)));
-        //bytes32 inp = abi.encodePacked(x, _reqid);
-        vrf_ver(x, pk, y, proof);
+        bytes memory inp = abi.encodePacked(x, _reqid);
+        vrf_ver(inp, pk, y, proof);
 
         emit ReqFulf(_reqid, y);
-        nonceUsed[_reqid] = true;
-        
+
+        //nonceUsed[_reqid] = true;
+        delete requests[_reqid];
     }
-    //function bytes32_to_uint256(bytes32 inp) public pure returns (uint256) {
-    //    return uint256(inp);
-    //}
-    //function uint256_to_bytes32(uint256 inp) public pure returns (bytes32) {
-    //    return bytes32(inp);
-    //}
 
     // reverts on fail
-    function vrf_ver(bytes memory inp, uint256[2] memory _pk, bytes32 y, GoldbergVrf.Proof memory proof) public view {
-
+    function vrf_ver(
+        bytes memory inp,
+        uint256[2] memory _pk,
+        bytes32 y,
+        GoldbergVrf.Proof memory proof
+    ) public view {
         gb._verifyVRFProof(
             _pk,
             proof.gamma,
@@ -76,4 +71,19 @@ contract Vrf {
         require(y == keccak256(abi.encode(proof.gamma)));
     }
 
+    function _req_return_pt(
+        bytes memory x
+    ) public returns (bytes32, uint256[2] memory) {
+        uint256 _reqid = req(x);
+        bytes32 inp = keccak256(abi.encodePacked(x, _reqid));
+        uint256[2] memory pt = gb._hashToCurve(pk, uint256(inp));
+        emit ReqGen(reqid, x);
+        return (inp, pt);
+    }
+    function _bytes32_to_uint256(bytes32 inp) public pure returns (uint256) {
+        return uint256(inp);
+    }
+    function _uint256_to_bytes32(uint256 inp) public pure returns (bytes32) {
+        return bytes32(inp);
+    }
 }

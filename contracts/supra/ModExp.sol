@@ -7,7 +7,9 @@ library ModexpInverse {
     function run(uint256 t2) internal pure returns (uint256 t0) {
         // solium-disable-next-line security/no-inline-assembly
         assembly {
-            let n := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+            let
+                n
+            := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
             t0 := mulmod(t2, t2, n)
             let t5 := mulmod(t0, t2, n)
             let t1 := mulmod(t5, t0, n)
@@ -324,7 +326,9 @@ library ModexpSqrt {
     function run(uint256 t6) internal pure returns (uint256 t0) {
         // solium-disable-next-line security/no-inline-assembly
         assembly {
-            let n := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+            let
+                n
+            := 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
 
             t0 := mulmod(t6, t6, n)
             let t4 := mulmod(t0, t6, n)

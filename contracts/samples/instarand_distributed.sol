@@ -8,7 +8,6 @@ import "../chainlink/chainlink_modified.sol";
 
 // distributed instarand
 contract InstaRandDistributed {
-
     uint256[4] pk_server;
 
     mapping(bytes32 => bytes32) internal server_outputs;
@@ -19,7 +18,7 @@ contract InstaRandDistributed {
     event KeyRegistered(InstaRand.ClientInput x);
     event Prever(InstaRand.ClientInput x, bytes32 y);
     event Ver(InstaRand.FormattedInput inp, bytes32 w_i, bytes32 z_i);
-    
+
     function init() public {
         gb = new Vrf();
         glow = new Dvrf();
@@ -34,21 +33,27 @@ contract InstaRandDistributed {
         //client_inputs[client_id] = keccak256(abi.encodePacked(x.pk, x.e));
     }
 
-    function pre_ver(InstaRand.ClientInput memory x, bytes32 y, uint256[2] memory pi) public {
-        
+    function pre_ver(
+        InstaRand.ClientInput memory x,
+        bytes32 y,
+        uint256[2] memory pi
+    ) public {
         require(server_outputs[keccak256(abi.encode(x))] == 0);
         glow.dvrf_ver(abi.encode(x), pk_server, y, pi);
 
         server_outputs[keccak256(abi.encode(x))] = y;
-        
+
         emit Prever(x, y);
-        
     }
 
-    function verify(InstaRand.FormattedInput memory inp, bytes32 w_i, GoldbergVrf.Proof memory pi_i) public {
+    function verify(
+        InstaRand.FormattedInput memory inp,
+        bytes32 w_i,
+        GoldbergVrf.Proof memory pi_i
+    ) public {
         bytes32 inp_as_key = keccak256(abi.encode(inp.pre_inp));
         require(!nonceUsed[inp_as_key]);
-        
+
         require(server_outputs[inp_as_key] == inp.y);
         require(inp.y != 0);
 
@@ -60,8 +65,6 @@ contract InstaRandDistributed {
 
         nonceUsed[inp_as_key] = true;
 
-        emit Ver(inp, w_i, z_i);        
+        emit Ver(inp, w_i, z_i);
     }
-
 }
-

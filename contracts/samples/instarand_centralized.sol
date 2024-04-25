@@ -15,7 +15,7 @@ contract InstaRand {
     mapping(bytes32 => bytes32) internal server_outputs;
     mapping(bytes32 => bool) internal nonceUsed;
     Vrf internal gb;
-    
+
     event KeyRegistered(ClientInput x);
     event Prever(ClientInput x, bytes32 y);
     event Ver(FormattedInput inp, bytes32 w_i, bytes32 z_i);
@@ -46,20 +46,20 @@ contract InstaRand {
     }
 
     function pre_ver(ClientInput memory x, bytes32 y, GoldbergVrf.Proof memory proof) public {
-        
+
         require(server_outputs[keccak256(abi.encode(x))] == 0);
         gb.vrf_ver(abi.encode(x), pk_server, y, proof);
 
         server_outputs[keccak256(abi.encode(x))] = y;
-        
+
         emit Prever(x, y);
-        
+
     }
 
     function verify(FormattedInput memory inp, bytes32 w_i, GoldbergVrf.Proof memory pi_i) public {
         bytes32 inp_as_key = keccak256(abi.encode(inp.pre_inp));
         require(!nonceUsed[inp_as_key]);
-        
+
         require(server_outputs[inp_as_key] == inp.y);
         require(inp.y != 0);
 
@@ -71,8 +71,7 @@ contract InstaRand {
 
         nonceUsed[inp_as_key] = true;
 
-        emit Ver(inp, w_i, z_i);        
+        emit Ver(inp, w_i, z_i);
     }
 
 }
-

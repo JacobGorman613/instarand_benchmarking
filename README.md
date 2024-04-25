@@ -52,6 +52,8 @@ These can be called to simulate normal SC execution to measure total gas consume
 #### Software Details
 - Compiled using Solidity Compiler 0.8.19
 - Deployed and run on Remix VM (Cancun) (TODO link)
+- TODO explain what this means w.r.t. ethereum
+- Note some of these contracts are too large to be deployed on ethereum main net
 #### Gas Measurement
 - `<FOO>.txt` in [`./data/gas/`](./data/gas/) contains transcripts of calls made to `<FOO>.sol` in either [`./contracts/benchmarks`](./contracts/benchmarks/) or [`./contracts/samples`](./contracts/samples/)
 - [`./data/gas/analysis.md`](./data/gas/analysis.md) contains analysis of the data from the transcripts
