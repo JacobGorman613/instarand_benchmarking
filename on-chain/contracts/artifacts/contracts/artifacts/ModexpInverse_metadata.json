@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BLS.sol": "ModexpInverse"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BLS.sol": {
+			"keccak256": "0x50056f6f2989e4154a933cfb4fdd2380399904acacb79b63cc8243ccfbc29b6a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://666cdacabc780c4ff01657fec35bc3558e0d417f377621e62741e28820d3229a",
+				"dweb:/ipfs/QmW3mpVqH6oLJ89CiKudBAx3kkuuj9P2tLebafm6NHmXY5"
+			]
+		}
+	},
+	"version": 1
+}

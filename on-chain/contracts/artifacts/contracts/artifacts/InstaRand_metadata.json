@@ -1,0 +1,338 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					}
+				],
+				"name": "GasMeasurementInstaRand",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "bytes",
+								"name": "e",
+								"type": "bytes"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct InstaRand.ClientInput",
+						"name": "x",
+						"type": "tuple"
+					}
+				],
+				"name": "KeyRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "bytes",
+								"name": "e",
+								"type": "bytes"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct InstaRand.ClientInput",
+						"name": "x",
+						"type": "tuple"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "Prever",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256[2]",
+						"name": "pk_c",
+						"type": "uint256[2]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "z_i",
+						"type": "bytes32"
+					}
+				],
+				"name": "Ver",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "gamma",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "_hash_gamma_to_y",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "bytes",
+								"name": "e",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct InstaRand.ClientInput",
+						"name": "x",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "w_i",
+						"type": "bytes32"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "gamma",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "s",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "seed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "uWitness",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "cGammaWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "sHashWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "zInv",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct DDH.Proof",
+						"name": "pi_i",
+						"type": "tuple"
+					}
+				],
+				"name": "fulfill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "bytes",
+								"name": "e",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct InstaRand.ClientInput",
+						"name": "x",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "signature",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "pre_ver",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "bytes",
+								"name": "e",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct InstaRand.ClientInput",
+						"name": "x",
+						"type": "tuple"
+					}
+				],
+				"name": "register_client_key",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					}
+				],
+				"name": "set_pk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "../scripts/deploy_and_bench_instarand.ts",
+			"details": "TODO",
+			"kind": "dev",
+			"methods": {},
+			"title": "InstaRand",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/instarand.sol": "InstaRand"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BLS.sol": {
+			"keccak256": "0x50056f6f2989e4154a933cfb4fdd2380399904acacb79b63cc8243ccfbc29b6a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://666cdacabc780c4ff01657fec35bc3558e0d417f377621e62741e28820d3229a",
+				"dweb:/ipfs/QmW3mpVqH6oLJ89CiKudBAx3kkuuj9P2tLebafm6NHmXY5"
+			]
+		},
+		"contracts/DDH.sol": {
+			"keccak256": "0xc5828adc4bbe4b7502ab4f86c5aad59339c727fafcc29ac9b35ff24342c6e812",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ae63df46b17ae85651d7d206b7e39bfa324abbf6d0b16f4d844db752cac7dc1",
+				"dweb:/ipfs/QmPsrz4sAWuPsSsMnLzVdiExDDssswj8yGKbJgqbCspL1g"
+			]
+		},
+		"contracts/instarand.sol": {
+			"keccak256": "0x30b25d0781c6b3b21174ce6b7086cd6379743ab501329f5c72320b264127c3ee",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://78a5f58c24a3f4e8033f46bb23f79f8e7ae7da4cb1a472112834e05655f6feac",
+				"dweb:/ipfs/QmcyFmtvZLN6fWvgmgrShmiDLbDibM51BYLvNp9Lgxy2rA"
+			]
+		}
+	},
+	"version": 1
+}

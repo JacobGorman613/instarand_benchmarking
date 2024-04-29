@@ -1,0 +1,396 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "id",
+						"type": "uint8"
+					}
+				],
+				"name": "GasMeasuredOperations",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "gamma",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "_hash_gamma_to_y",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "inp",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_sig_ver_ecp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "domain",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "inp_str",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_sig_ver_str",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "inp",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_vrf_ver_ecp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "domain",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "inp_str",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_vrf_ver_str",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "domain",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "message",
+						"type": "bytes"
+					}
+				],
+				"name": "bench_bn254_hash_to_curve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "pk",
+						"type": "uint256[2]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "gamma",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "s",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "seed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "uWitness",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "cGammaWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "sHashWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "zInv",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct DDH.Proof",
+						"name": "proof",
+						"type": "tuple"
+					}
+				],
+				"name": "bench_ddh_vrf_ver_ecp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "inp",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "pk",
+						"type": "uint256[2]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "gamma",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "s",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "seed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "uWitness",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "cGammaWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "sHashWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "zInv",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct DDH.Proof",
+						"name": "proof",
+						"type": "tuple"
+					}
+				],
+				"name": "bench_ddh_vrf_ver_str",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "pk",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "input",
+						"type": "uint256"
+					}
+				],
+				"name": "bench_secp256k1_hash_to_curve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "../scripts/deploy_and_bench_operations.ts",
+			"details": "TODO",
+			"kind": "dev",
+			"methods": {},
+			"title": "Operations",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/operations.sol": "Operations"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BLS.sol": {
+			"keccak256": "0x50056f6f2989e4154a933cfb4fdd2380399904acacb79b63cc8243ccfbc29b6a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://666cdacabc780c4ff01657fec35bc3558e0d417f377621e62741e28820d3229a",
+				"dweb:/ipfs/QmW3mpVqH6oLJ89CiKudBAx3kkuuj9P2tLebafm6NHmXY5"
+			]
+		},
+		"contracts/DDH.sol": {
+			"keccak256": "0xc5828adc4bbe4b7502ab4f86c5aad59339c727fafcc29ac9b35ff24342c6e812",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ae63df46b17ae85651d7d206b7e39bfa324abbf6d0b16f4d844db752cac7dc1",
+				"dweb:/ipfs/QmPsrz4sAWuPsSsMnLzVdiExDDssswj8yGKbJgqbCspL1g"
+			]
+		},
+		"contracts/operations.sol": {
+			"keccak256": "0xfd28ff58d12c2b06340bacc13eae2325a92db92b3ac06812ad7c6636187ff025",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://20a9a987ca2f40a48783523ad38ab2dea7f72252fd332350b7e36dc310ff5a6a",
+				"dweb:/ipfs/Qmaqiu7LHNxg9febfa2afNWkcD3HPpmws9nN9ELadX3bKg"
+			]
+		}
+	},
+	"version": 1
+}

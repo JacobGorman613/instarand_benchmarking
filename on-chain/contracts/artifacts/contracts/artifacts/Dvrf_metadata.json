@@ -1,0 +1,205 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					}
+				],
+				"name": "GasMeasurementDvrf",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					}
+				],
+				"name": "ReqFulf",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "x",
+						"type": "bytes"
+					}
+				],
+				"name": "ReqGen",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "proof",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "_hash_proof",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "x",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reqid",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Dvrf.FormattedInput",
+						"name": "inp",
+						"type": "tuple"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "proof",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "fulf",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "x",
+						"type": "bytes"
+					}
+				],
+				"name": "req",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[4]",
+						"name": "_pk",
+						"type": "uint256[4]"
+					}
+				],
+				"name": "set_pk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "../scripts/deploy_and_bench_dvrf.ts",
+			"details": "TODO",
+			"kind": "dev",
+			"methods": {},
+			"title": "Dvrf",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/dvrf.sol": "Dvrf"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BLS.sol": {
+			"keccak256": "0x50056f6f2989e4154a933cfb4fdd2380399904acacb79b63cc8243ccfbc29b6a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://666cdacabc780c4ff01657fec35bc3558e0d417f377621e62741e28820d3229a",
+				"dweb:/ipfs/QmW3mpVqH6oLJ89CiKudBAx3kkuuj9P2tLebafm6NHmXY5"
+			]
+		},
+		"contracts/dvrf.sol": {
+			"keccak256": "0xdedc6e341acb8bc1fa8bfbf9b189d1cf053aab0ab6d2f080b5ccd3245516b630",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://255ee62ab611cfe48b865f712a11615ca039cc75f804ced8b903a79fcbff2365",
+				"dweb:/ipfs/QmRKiLT6g7BjYBDJHpPSPVTcPwEsDZGhRy2r2Q37kkNAri"
+			]
+		}
+	},
+	"version": 1
+}

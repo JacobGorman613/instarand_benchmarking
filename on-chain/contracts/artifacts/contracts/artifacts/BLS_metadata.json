@@ -1,0 +1,209 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "inp",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_sig_ver_ecp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "domain",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "inp_str",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_sig_ver_str",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "inp",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_vrf_ver_ecp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "domain",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "inp_str",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256[4]",
+						"name": "pk",
+						"type": "uint256[4]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "sig",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "bench_bls_vrf_ver_str",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "domain",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "message",
+						"type": "bytes"
+					}
+				],
+				"name": "bench_bn254_hash_to_curve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "../scripts/deploy_and_bench_bls.ts",
+			"details": "TODO",
+			"kind": "dev",
+			"methods": {},
+			"title": "BLS",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BLS.sol": "BLS"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BLS.sol": {
+			"keccak256": "0x50056f6f2989e4154a933cfb4fdd2380399904acacb79b63cc8243ccfbc29b6a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://666cdacabc780c4ff01657fec35bc3558e0d417f377621e62741e28820d3229a",
+				"dweb:/ipfs/QmW3mpVqH6oLJ89CiKudBAx3kkuuj9P2tLebafm6NHmXY5"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,240 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					}
+				],
+				"name": "GasMeasurementVrf",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					}
+				],
+				"name": "ReqFulf",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "x",
+						"type": "bytes"
+					}
+				],
+				"name": "ReqGen",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "gamma",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "_hash_gamma_to_y",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_reqid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "pk",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "gamma",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "s",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "seed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "uWitness",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "cGammaWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "sHashWitness",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "zInv",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct DDH.Proof",
+						"name": "proof",
+						"type": "tuple"
+					}
+				],
+				"name": "fulf",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "x",
+						"type": "bytes"
+					}
+				],
+				"name": "req",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "_pk",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "set_pk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "../scripts/deploy_and_bench_vrf.ts",
+			"details": "TODO",
+			"kind": "dev",
+			"methods": {},
+			"title": "Vrf",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/vrf.sol": "Vrf"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/DDH.sol": {
+			"keccak256": "0xc5828adc4bbe4b7502ab4f86c5aad59339c727fafcc29ac9b35ff24342c6e812",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ae63df46b17ae85651d7d206b7e39bfa324abbf6d0b16f4d844db752cac7dc1",
+				"dweb:/ipfs/QmPsrz4sAWuPsSsMnLzVdiExDDssswj8yGKbJgqbCspL1g"
+			]
+		},
+		"contracts/vrf.sol": {
+			"keccak256": "0x6cbf2427343eaa1cc401d07227963e2796129e4e9751f0e0b850b2d1dfa9198e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://7fd833f8cbfda2a2404aaf04bc714a6489a78bf6ef3b61d24ce196480feb8b92",
+				"dweb:/ipfs/QmSorV6US7ke9Z1SL9yJTTx5DrMvZQLAUbiVcNAzcWssMr"
+			]
+		}
+	},
+	"version": 1
+}

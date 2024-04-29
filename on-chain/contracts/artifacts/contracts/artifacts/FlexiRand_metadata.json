@@ -1,0 +1,326 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[2]",
+						"name": "x_blind",
+						"type": "uint256[2]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "s",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct FlexiRand.ZkpKdl",
+						"name": "proof",
+						"type": "tuple"
+					}
+				],
+				"name": "BlindedInputSubmitted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					}
+				],
+				"name": "GasMeasurementFlexiRand",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[2]",
+						"name": "y_blind",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "Prever",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "e",
+						"type": "bytes"
+					}
+				],
+				"name": "ReqGen",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reqid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					}
+				],
+				"name": "Ver",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "proof",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "_hash_proof",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "e",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reqid",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FlexiRand.FormattedInput",
+						"name": "x",
+						"type": "tuple"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "y",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "pi",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "fulf",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "e",
+						"type": "bytes"
+					}
+				],
+				"name": "gen_req",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_reqid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "y_blind",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "pre_ver",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[4]",
+						"name": "_pk",
+						"type": "uint256[4]"
+					}
+				],
+				"name": "set_pk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "e",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reqid",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FlexiRand.FormattedInput",
+						"name": "x",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "x_blind",
+						"type": "uint256[2]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "s",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FlexiRand.ZkpKdl",
+						"name": "proof",
+						"type": "tuple"
+					}
+				],
+				"name": "submit_blinding",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "../scripts/deploy_and_bench_flexirand.ts",
+			"details": "TODO",
+			"kind": "dev",
+			"methods": {},
+			"title": "FlexiRand",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/flexirand.sol": "FlexiRand"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BLS.sol": {
+			"keccak256": "0x50056f6f2989e4154a933cfb4fdd2380399904acacb79b63cc8243ccfbc29b6a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://666cdacabc780c4ff01657fec35bc3558e0d417f377621e62741e28820d3229a",
+				"dweb:/ipfs/QmW3mpVqH6oLJ89CiKudBAx3kkuuj9P2tLebafm6NHmXY5"
+			]
+		},
+		"contracts/flexirand.sol": {
+			"keccak256": "0x0c8be899cf6f06156145be8dafb3eade92fd4690ad7b26a454b8698fae6c6fe8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://7e00742a02e384531cb3776ff98e62d801ea73391164a0f2700a8ee7649b1bd0",
+				"dweb:/ipfs/QmdAUBUPcqMX9aCJwhna14oFK4BCQnLdAqyfDdNxhL1Z75"
+			]
+		}
+	},
+	"version": 1
+}
