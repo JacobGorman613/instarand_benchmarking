@@ -1,0 +1,244 @@
+creation of FlexiRand pending...
+[vm]from: 0x5B3...eddC4to: FlexiRand.(constructor)value: 0 weidata: 0x608...30033logs: 0hash: 0x6af...febee
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 1 repeitions
+total transaction gas over 1 req_gen transactions 72577
+total transaction gas over 1 submit_blinding transactions 80219
+total transaction gas over 1 pre_ver transactions 166329
+total transaction gas over 1 verify transactions 183615
+average transaction gas over 1 req_gen transactions 72577
+average transaction gas over 1 submit_blinding transactions 80219
+average transaction gas over 1 pre_ver transactions 166329
+average transaction gas over 1 verify transactions 183615
+total execution gas over 1 req_gen transactions 47612
+total execution gas over 1 submit_blinding transactions 50903
+total execution gas over 1 pre_ver transactions 140844
+total execution gas over 1 verify transactions 160210
+average execution gas over 1 req_gen transactions 47612
+average execution gas over 1 submit_blinding transactions 50903
+average execution gas over 1 pre_ver transactions 140844
+average execution gas over 1 verify transactions 160210
+transaction gas raw data
+[[47612],[50903],[140844],[160210]] 
+execution gas raw data
+[[72577],[80219],[166329],[183615]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554890
+total transaction gas over 10 submit_blinding transactions 802214
+total transaction gas over 10 pre_ver transactions 1663386
+total transaction gas over 10 verify transactions 1927254
+average transaction gas over 10 req_gen transactions 55489
+average transaction gas over 10 submit_blinding transactions 80221.4
+average transaction gas over 10 pre_ver transactions 166338.6
+average transaction gas over 10 verify transactions 192725.4
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1693108
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 169310.8
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[174383,159818,174428,160014,174187,167221,167025,167221,174383,174428]] 
+execution gas raw data
+[[55489,55489,55489,55489,55489,55489,55489,55489,55489,55489],[80231,80195,80219,80231,80231,80219,80219,80219,80231,80219],[166341,166341,166341,166341,166341,166341,166329,166341,166341,166329],[197788,183235,197845,183431,197604,190626,190442,190638,197800,197845]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554854
+total transaction gas over 10 submit_blinding transactions 802178
+total transaction gas over 10 pre_ver transactions 1663398
+total transaction gas over 10 verify transactions 1927990
+average transaction gas over 10 req_gen transactions 55485.4
+average transaction gas over 10 submit_blinding transactions 80217.8
+average transaction gas over 10 pre_ver transactions 166339.8
+average transaction gas over 10 verify transactions 192799
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1693892
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 169389.2
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[174624,160014,159818,174383,181590,167221,160014,167417,181590,167221]] 
+execution gas raw data
+[[55489,55489,55489,55489,55489,55489,55489,55477,55477,55477],[80219,80231,80219,80207,80219,80219,80219,80219,80219,80207],[166341,166341,166341,166341,166341,166329,166341,166341,166341,166341],[198029,183431,183235,197788,204995,190638,183431,190822,204995,190626]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554878
+total transaction gas over 10 submit_blinding transactions 802238
+total transaction gas over 10 pre_ver transactions 1663386
+total transaction gas over 10 verify transactions 1913383
+average transaction gas over 10 req_gen transactions 55487.8
+average transaction gas over 10 submit_blinding transactions 80223.8
+average transaction gas over 10 pre_ver transactions 166338.6
+average transaction gas over 10 verify transactions 191338.3
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1679237
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 167923.7
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[174383,160014,160210,160014,167221,174383,174383,167025,181590,160014]] 
+execution gas raw data
+[[55489,55489,55489,55477,55489,55489,55489,55489,55489,55489],[80231,80219,80231,80219,80195,80231,80231,80231,80219,80231],[166341,166341,166341,166341,166329,166341,166329,166341,166341,166341],[197800,183431,183627,183419,190626,197800,197800,190442,205007,183431]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554854
+total transaction gas over 10 submit_blinding transactions 802214
+total transaction gas over 10 pre_ver transactions 1663374
+total transaction gas over 10 verify transactions 1949292
+average transaction gas over 10 req_gen transactions 55485.4
+average transaction gas over 10 submit_blinding transactions 80221.4
+average transaction gas over 10 pre_ver transactions 166337.4
+average transaction gas over 10 verify transactions 194929.2
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1715182
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 171518.2
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[174383,181786,160014,160014,188752,174187,167417,160014,174187,174428]] 
+execution gas raw data
+[[55489,55489,55489,55489,55489,55489,55489,55489,55477,55465],[80219,80231,80231,80231,80207,80231,80219,80231,80207,80207],[166341,166341,166329,166341,166341,166317,166341,166341,166341,166341],[197800,205203,183431,183431,212169,197592,190834,183431,197592,197809]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554866
+total transaction gas over 10 submit_blinding transactions 802250
+total transaction gas over 10 pre_ver transactions 1663338
+total transaction gas over 10 verify transactions 1898710
+average transaction gas over 10 req_gen transactions 55486.6
+average transaction gas over 10 submit_blinding transactions 80225
+average transaction gas over 10 pre_ver transactions 166333.8
+average transaction gas over 10 verify transactions 189871
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1664672
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 166467.2
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[174383,181590,167221,160014,167221,174383,159818,160014,160014,160014]] 
+execution gas raw data
+[[55489,55477,55489,55489,55489,55489,55489,55489,55489,55477],[80219,80219,80231,80231,80207,80231,80231,80231,80231,80219],[166317,166341,166317,166329,166341,166341,166341,166329,166341,166341],[197788,204971,190626,183431,190626,197776,183223,183431,183419,183419]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554866
+total transaction gas over 10 submit_blinding transactions 802226
+total transaction gas over 10 pre_ver transactions 1663386
+total transaction gas over 10 verify transactions 1970717
+average transaction gas over 10 req_gen transactions 55486.6
+average transaction gas over 10 submit_blinding transactions 80222.6
+average transaction gas over 10 pre_ver transactions 166338.6
+average transaction gas over 10 verify transactions 197071.7
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1736607
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 173660.7
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[167025,167221,174187,174187,188948,174428,174579,160210,174428,181394]] 
+execution gas raw data
+[[55477,55489,55489,55477,55489,55489,55489,55489,55489,55489],[80219,80219,80231,80219,80219,80231,80231,80231,80219,80207],[166341,166341,166341,166341,166329,166341,166329,166341,166341,166341],[190430,190638,197604,197592,212365,197833,197996,183627,197821,204811]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554866
+total transaction gas over 10 submit_blinding transactions 802214
+total transaction gas over 10 pre_ver transactions 1663386
+total transaction gas over 10 verify transactions 1899183
+average transaction gas over 10 req_gen transactions 55486.6
+average transaction gas over 10 submit_blinding transactions 80221.4
+average transaction gas over 10 pre_ver transactions 166338.6
+average transaction gas over 10 verify transactions 189918.3
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1665109
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 166510.9
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[160014,160014,167221,167221,160014,174579,174428,160210,160014,181394]] 
+execution gas raw data
+[[55489,55489,55489,55489,55489,55489,55477,55477,55489,55489],[80219,80231,80231,80231,80219,80219,80219,80207,80231,80207],[166341,166341,166329,166341,166341,166329,166341,166341,166341,166341],[183431,183419,190626,190626,183419,197996,197833,183603,183419,204811]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554854
+total transaction gas over 10 submit_blinding transactions 802238
+total transaction gas over 10 pre_ver transactions 1663386
+total transaction gas over 10 verify transactions 1920274
+average transaction gas over 10 req_gen transactions 55485.4
+average transaction gas over 10 submit_blinding transactions 80223.8
+average transaction gas over 10 pre_ver transactions 166338.6
+average transaction gas over 10 verify transactions 192027.4
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1686248
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 168624.8
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[174383,167221,174383,167417,174383,160014,167221,181590,159818,159818]] 
+execution gas raw data
+[[55489,55477,55489,55489,55489,55489,55477,55477,55489,55489],[80219,80207,80219,80231,80231,80231,80219,80219,80231,80231],[166341,166329,166341,166341,166341,166341,166341,166329,166341,166341],[197788,190614,197788,190822,197800,183419,190626,204983,183235,183199]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554878
+total transaction gas over 10 submit_blinding transactions 802250
+total transaction gas over 10 pre_ver transactions 1663386
+total transaction gas over 10 verify transactions 1906414
+average transaction gas over 10 req_gen transactions 55487.8
+average transaction gas over 10 submit_blinding transactions 80225
+average transaction gas over 10 pre_ver transactions 166338.6
+average transaction gas over 10 verify transactions 190641.4
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1672316
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 167231.6
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[160210,181394,167025,167221,167221,167221,160014,167221,174579,160210]] 
+execution gas raw data
+[[55489,55489,55489,55489,55489,55477,55489,55489,55489,55489],[80231,80231,80219,80231,80219,80219,80231,80219,80219,80231],[166341,166329,166341,166329,166341,166341,166341,166341,166341,166341],[183615,204811,190442,190638,190626,190614,183419,190626,197996,183627]] 
+running scripts/bench_flexirand.ts ...
+running bench_flexirand with 10 repeitions
+total transaction gas over 10 req_gen transactions 554878
+total transaction gas over 10 submit_blinding transactions 802214
+total transaction gas over 10 pre_ver transactions 1663374
+total transaction gas over 10 verify transactions 1913377
+average transaction gas over 10 req_gen transactions 55487.8
+average transaction gas over 10 submit_blinding transactions 80221.4
+average transaction gas over 10 pre_ver transactions 166337.4
+average transaction gas over 10 verify transactions 191337.7
+total execution gas over 10 req_gen transactions 305120
+total execution gas over 10 submit_blinding transactions 509030
+total execution gas over 10 pre_ver transactions 1408440
+total execution gas over 10 verify transactions 1679327
+average execution gas over 10 req_gen transactions 30512
+average execution gas over 10 submit_blinding transactions 50903
+average execution gas over 10 pre_ver transactions 140844
+average execution gas over 10 verify transactions 167932.7
+transaction gas raw data
+[[30512,30512,30512,30512,30512,30512,30512,30512,30512,30512],[50903,50903,50903,50903,50903,50903,50903,50903,50903,50903],[140844,140844,140844,140844,140844,140844,140844,140844,140844,140844],[174232,167417,167221,167221,167221,167221,174187,174383,160210,160014]] 
+execution gas raw data
+[[55489,55489,55489,55489,55489,55489,55489,55477,55489,55489],[80231,80231,80219,80219,80231,80219,80231,80207,80207,80219],[166341,166341,166329,166329,166341,166329,166341,166341,166341,166341],[197649,190810,190638,190638,190626,190602,197604,197776,183615,183419]] 

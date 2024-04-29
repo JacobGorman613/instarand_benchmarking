@@ -1,6 +1,11 @@
 # Gas Cost Analysis
+## Experimental Methods
+#### Cryptography / Notation
+- `bytes` used length `32` (additional input lengths tested in log but for data presentation)
+- for instarand we set the length of u to 32 bytes
+- for all protocols if VRF input is just "a message" we assume 32 bytes (plus concat with request id)
 ## Direct Gas Measurements
-#### Individual Operations ([Transcript](./benchmark_operations.md))
+#### Individual Operations ([Transcript](./transcripts/benchmark_operations.md))
 - Costs used to estimate SC calls
 - Gas Use:
   - `hash_to_bits(bytes memory inp)`
@@ -37,7 +42,7 @@
   - `delete_mapping(uint256 key)`
     - returns cost to execute `require(!bool_mapping[key])` for `mapping(uint256 => bool) bool_mapping` stored on-chain
     - Measured Gas Use: TODO gwei
-#### Chainlink VRF Verification ([Transcript](./benchmark_chainlink.md))
+#### Chainlink VRF Verification ([Transcript](./transcripts/benchmark_chainlink.md))
 - Direct measurement of methods in [`chainlink_modified.sol`](../contracts/chainlink/chainlink_modified.sol)
   - Note that the modifications to [`chainlink.sol`](../contracts/chainlink/chainlink.sol) add operations which cost additional gas.
     - specifically we perfrom 9 additional negations
@@ -55,7 +60,7 @@
     - benchmarked using Supra's code
     - Measured Gas Use: TODO gwei
     - Adjusted Gas Use: TODO gwei
-#### Supra dVRF ([Transcript](./benchmark_supra.md))
+#### Supra dVRF ([Transcript](./transcripts/benchmark_supra.md))
 - Direct measurement of methods in [`BLS_modified.sol`](../contracts/supra/BLS_modified.sol)
   - Note the modifications to [`BLS.sol`](../contracts/supra/BLS.sol) are net zero gas since we change one occurrence of `require(!<FOO>)` to `require(<FOO>)` and one occurrence of `require(<BAR>)` to `require(!<BAR>)` (these calls always occur together).
   Since we have removed one negation operation and added another, the total gas cost stays the same
@@ -72,7 +77,7 @@
     - returns cost to hash G1 member of BN254 curve to 256 bits
     - Measured Gas Use: TODO gwei
 ## Sample SC Execution
-#### VRF ([Transcript](./vrf.md))
+#### VRF ([Transcript](./transcripts/vrf.md))
 - Sample SC implementing VRF Service
 - Gas Use:
   - `req(bytes memory x)`
@@ -81,7 +86,7 @@
   - `fulf(bytes memory x, uint256 _reqid, bytes32 y, GoldbergVrf.Proof memory proof)`
       - tested `x` with length of 32 bytes
       - TODO gwei
-#### dVRF ([Transcript](./dvrf.md))
+#### dVRF ([Transcript](./transcripts/dvrf.md))
 - Sample SC implementing DVRF Service
 - Gas Use:
   - `req(bytes memory x)`
@@ -90,7 +95,7 @@
   - `function fulf(bytes memory x, uint256 _reqid, bytes32 y, uint256[2] calldata proof)`
       - tested `x` with length of 32 bytes
       - TODO gwei
-#### FlexiRand ([Transcript](./flexirand.md))
+#### FlexiRand ([Transcript](./transcripts/flexirand.md))
 - Sample SC implementing FlexiRand Service
   - Note we assume the VRF Server(s) validate client blinding off-chain
 - Gas Use:
@@ -100,7 +105,7 @@
   - `submit_blinding(FormattedInput memory x, uint256[2] memory x_blind, ZkpKdl memory proof)`
   - `pre_ver(FormattedInput memory x, uint256[2] memory y_blind)`
   - `function verify(FormattedInput memory x, bytes32 y, uint256[2] memory pi)`
-#### InstaRand with Centralized Server ([Transcript](./instarand_centralized.md))
+#### InstaRand with Centralized Server ([Transcript](./transcripts/instarand_centralized.md))
 - Sample SC implementing InstaRand Service where VRF is computed by centralized server
 - Gas Use:
   - `register_client_key(ClientInput memory x)`
@@ -108,4 +113,4 @@
       - TODO gwei
   - `pre_ver(ClientInput memory x, bytes32 y, GoldbergVrf.Proof memory proof)`
   - `verify(FormattedInput memory inp, bytes32 w_i, GoldbergVrf.Proof memory pi_i)`
-#### InstaRand with Decentralized Server ([Transcript](./instarand_decentralized.md))
+#### InstaRand with Decentralized Server ([Transcript](./transcripts/instarand_decentralized.md))
